@@ -1,12 +1,14 @@
 {
-  "name": "demo",
-  "version": "1.0.0",
-  "description": "A project using vue,typescript,and koa.",
-  "author": "wuguofang <982143767@qq.com>",
+  "name": "{{projectName}}",
+  "version": "{{projectVersion}}",
+  "description": "{{projectDescription}}",
+  "author": "wuguofang",
   "private": true,
+  "main": "www",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "node app.js",
+    "start": "node www",
+    "boot": "NODE_ENV=dev supervisor -i ./node_modules node www",
     "build": "node build/build.js"
   },
   "dependencies": {

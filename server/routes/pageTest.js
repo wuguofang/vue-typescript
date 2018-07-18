@@ -1,5 +1,3 @@
-const render = require('../../service/renderService');
-
 KY.onGet('/', async (ctx, next) => {
    ctx.body = 'you are visting the page index';
 });
