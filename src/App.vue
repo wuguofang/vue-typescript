@@ -1,21 +1,16 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <!-- <HelloWorld/> -->
-    <router-link to="/">first page</router-link>
-    <router-link to="/sec">second page</router-link>
-    <router-view></router-view>
+    <router-view/>
   </div>
 </template>
 
-<script>
-// import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import Vue from 'vue'
+import Component from 'vue-class-component'
 
-export default {
-  name: 'App',
-  components: {
-    // HelloWorld
-  }
+@Component({})
+export default class App extends Vue {
 }
 </script>
 
@@ -28,4 +23,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>

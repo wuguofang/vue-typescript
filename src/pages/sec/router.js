@@ -4,7 +4,7 @@ import sec from './views/sec.vue';
 
 const routes = [{
 	name: 'sec',
-	path: '/sec',
+	path: '/',
 	component: sec
 }];
 

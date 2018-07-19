@@ -1,5 +1,5 @@
 KY.onGet('/', async (ctx, next) => {
-   ctx.body = 'you are visting the page index';
+   ctx.redirect('/first.html');
 });
 
 KY.onGet('/t1/user', async (ctx, next) => {
