@@ -1,9 +1,5 @@
 # {{projectName}}
 
-{{projectName}}
-
-# Description
-
 {{projectDescription}}
 
 # 目录结构
