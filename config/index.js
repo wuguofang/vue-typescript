@@ -3,18 +3,31 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+const ip = require('ip')
+
+var staticLibURI;
+switch (process.env) {
+  case "product":
+    staticLibURI = `//localhost:8080`; // 需修改成线上静态资源服务器地址
+    break;
+  case  "local":
+    staticLibURI = `//localhost:8080`;
+    break;
+  default :
+    staticLibURI = `//localhost:8080`; // 需修改成测试环境静态资源服务器地址
+}
 
 module.exports = {
   dev: {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: `${staticLibURI}/`,
     proxyTable: {
         '/': {
             target: 'http://localhost:3110',
-            changeOrigin: true
-          }
+            changeOrigin: true,
+        }
     },
 
     // Various Dev Server settings

@@ -3,6 +3,9 @@ const path = require('path')
 const config = require('../config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const packageConfig = require('../package.json')
+const fs = require('fs')
+const exists = fs.existsSync || path.existsSync
+
 
 exports.assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
@@ -97,5 +100,26 @@ exports.createNotifierCallback = () => {
       subtitle: filename || '',
       icon: path.join(__dirname, 'logo.png')
     })
+  }
+}
+
+exports.mkdir = (path) => {
+  // 路径不存在
+  if (exists(path)) {
+    return;
+  }
+
+  // 创建上层目录
+  path.split(/\//).reduce(function (prev, next) {
+    if (prev && !exists(prev)) {
+      fs.mkdirSync(prev);
+    }
+
+    return prev + '/' + next;
+  });
+
+  // 最后一层
+  if (!exists(path)) {
+    fs.mkdirSync(path);
   }
 }

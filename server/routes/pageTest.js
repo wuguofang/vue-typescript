@@ -1,7 +1,13 @@
-KY.onGet('/', async (ctx, next) => {
-   ctx.redirect('/first.html');
-});
+"use strict";
 
+const render = require('../service/renderService');
+
+KY.onGet('/', async (ctx, next) => {
+   ctx.body = render('first');
+});
+KY.onGet('/sec', async (ctx, next) => {
+   ctx.body = render('sec');
+});
 KY.onGet('/t1/user', async (ctx, next) => {
   ctx.body = 'you are visting the page /t1/user';
 });
