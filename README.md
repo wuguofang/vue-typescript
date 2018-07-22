@@ -1,9 +1,5 @@
 # {{projectName}}
 
-{{projectName}}
-
-# Description
-
 {{projectDescription}}
 
 # 目录结构
@@ -26,22 +22,22 @@ workspace
     ├── tslint.json
 ```
 
-package.json中只需要安装2个依赖
+package.json中需要安装的依赖
 
 ```
 "dependencies": {
     "koa": "^2.5.2",
-	"koa-bodyparser": "^4.2.1",
-	"koa-logger": "^3.2.0",
-	"koa-router": "^7.4.0",
-	"koa-static": "^5.0.0",
-	"lodash": "^4.17.10",
-	"nunjucks": "^3.1.3",
-	"vue": "^2.5.2",
-	"vue-class-component": "^6.2.0",
-	"vue-property-decorator": "^7.0.0",
-	"vue-router": "^3.0.1",
-	"web-webpack-plugin": "^1.10.0"
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.10",
+    "nunjucks": "^3.1.3",
+    "vue": "^2.5.2",
+    "vue-class-component": "^6.2.0",
+    "vue-property-decorator": "^7.0.0",
+    "vue-router": "^3.0.1",
+    "web-webpack-plugin": "^1.10.0"
 }
 "devDependencies": {
     "autoprefixer": "^7.1.2",
