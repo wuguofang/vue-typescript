@@ -2,7 +2,7 @@
   "name": "{{projectName}}",
   "version": "{{projectVersion}}",
   "description": "{{projectDescription}}",
-  "author": "wuguofang",
+  "author": "{{author}}",
   "private": true,
   "main": "www",
   "scripts": {
