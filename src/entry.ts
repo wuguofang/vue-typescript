@@ -3,10 +3,13 @@
 import Vue from 'vue'
 import App from './App.vue'
 import vueRouter from 'vue-router'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
 
 Vue.config.productionTip = false
 
 Vue.use(vueRouter)
+Vue.use(iView)
 
 /* eslint-disable no-new */
 export default function (router, template) {
