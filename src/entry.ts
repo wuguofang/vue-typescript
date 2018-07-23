@@ -12,7 +12,7 @@ Vue.use(vueRouter)
 Vue.use(iView)
 
 /* eslint-disable no-new */
-export default function (router, template) {
+export default function (router, template?: string) {
   return new Vue({
     el: '#app',
     router,
